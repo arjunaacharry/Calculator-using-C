@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    float num1,num2,res;
+    char ch;
+    int op;
+   do{
+    printf("Enter two numbers : ");
+    scanf("%f%f",&num1,&num2);
+    printf("\n1 : Addition\n2 : Substraction\n3 : Multiplication\n4 : Division");
+    printf("\n\nWhat to do,Enter the number : ");
+    scanf("%d",&op);
+    
+    switch(op)
+    {
+        case 1:
+        res=num1+num2;
+        printf("RESULT= %f",res);
+        break;
+        case 2:
+        res=num1-num2;
+        printf("RESULT= %f",res);
+        break;
+        case 3:
+        res=num1*num2;
+        printf("RESULT= %f",res);
+        break;
+        case 4:
+        res=num1/num2;
+        printf("RESULT= %f",res);
+        break;
+        default:
+        printf("Invalid choice");
+        break;
+    }
+    printf("\nDo you want to continue : ");
+    scanf(" %c",&ch);
+   }
+   while(ch=='y'||ch=='Y');
+    getch();
+}
